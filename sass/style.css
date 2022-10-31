@@ -1,0 +1,1308 @@
+html {
+  overflow-x: hidden !important;
+}
+
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+:root {
+  --primary-color:#edf2fc;
+  --secondry-color:#133631;
+  --services-color:#133631;
+  --jeep-bgcolor:#fff;
+  --jeep-color:#133631;
+  --jeep-pcolor:#333;
+  --footer-color:#1D574F;
+}
+
+.dark-theme {
+  --primary-color:#000106;
+  --secondry-color:#edf2dc;
+  --services-color:#4285f4;
+  --jeep-bgcolor:#000106;
+  --jeep-color:#fff;
+  --jeep-pcolor:#fff;
+  --footer-color:#fff;
+}
+
+.hero {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  -webkit-transition: 1s;
+  transition: 1s;
+  position: relative;
+}
+
+.hero header {
+  width: 100%;
+  height: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero header .logo {
+  width: 20%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero header nav {
+  width: 80%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.hero header nav ul {
+  width: 70%;
+  margin: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+}
+
+.hero header nav ul li {
+  cursor: pointer;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.hero header nav ul li a {
+  text-decoration: none;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--secondry-color);
+  font-family: Oxanium;
+  -webkit-transition: all .4s ease;
+  transition: all .4s ease;
+}
+
+.hero header #moonicon {
+  width: 30px;
+  margin-right: 70px;
+  cursor: pointer;
+}
+
+.hero header #aze {
+  width: 50px;
+  height: 20px;
+  background-color: var(--jeep-color);
+  border: none;
+  margin-right: 50px;
+  color: var(--primary-color);
+}
+
+.hero header #eng {
+  width: 50px;
+  height: 20px;
+  background-color: var(--jeep-color);
+  border: none;
+  margin-right: 80px;
+  color: var(--primary-color);
+}
+
+.hero .side-bar {
+  position: relative;
+  position: absolute;
+  top: 0;
+  right: 0;
+  -webkit-transform: translateX(300px);
+          transform: translateX(300px);
+  background: #133631;
+  width: 20%;
+  height: 100vh;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.hero .side-bar .menu {
+  width: 100%;
+  margin-top: 80px;
+}
+
+.hero .side-bar .menu .item {
+  position: relative;
+  cursor: pointer;
+}
+
+.hero .side-bar .menu .item a {
+  color: #fff;
+  font-size: 16px;
+  font-family: Oxanium;
+  text-decoration: none;
+  display: block;
+  padding: 5px 30px;
+  line-height: 60px;
+  text-align: center;
+  position: relative;
+}
+
+.hero .side-bar .menu .item a:hover {
+  background-color: #1D574F;
+}
+
+.hero .side-bar .menu .item a .dropdown {
+  position: absolute;
+  right: 0;
+  margin: 20px;
+  -webkit-transition: 0.3s ease;
+  transition: 0.3s ease;
+}
+
+.hero .side-bar .menu .item .submenu {
+  background-color: black;
+  display: block;
+}
+
+.hero .side-bar .fa-times {
+  position: absolute;
+  right: 0;
+  font-size: 20px;
+  margin: 25px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.hero .side-bar .side-bar-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  color: #fff;
+  text-align: center;
+  margin-top: 20px;
+}
+
+.hero .side-bar .side-bar-icon .a {
+  width: 40px;
+  height: 30px;
+  background-color: #1D574F;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.hero .menu-btn {
+  position: absolute;
+  color: #133631;
+  font-size: 20px;
+  right: 0;
+  top: 0;
+  margin: 30px;
+  cursor: pointer;
+}
+
+.hero .side-bar.active {
+  -webkit-transform: translateX(0);
+          transform: translateX(0);
+}
+
+.hero .contents {
+  width: 100%;
+}
+
+.hero .contents h1 {
+  font-size: 50px;
+  font-weight: 800;
+  font-family: Manrope;
+  line-height: 60px;
+  color: var(--secondry-color);
+}
+
+.hero .contents p {
+  font-size: 17px;
+  font-weight: 500;
+  font-family: Manrope;
+  line-height: 20px;
+  color: #133631;
+  margin-top: 10px;
+}
+
+.hero .contents .buttons {
+  margin-top: 50px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.hero .contents .buttons .started {
+  width: 150px;
+  height: 50px;
+  border: none;
+  border-radius: 25px;
+  background-color: #133631;
+  color: #fff;
+  font-size: 20px;
+}
+
+.hero .contents .buttons .yaziandplaybtn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-left: 30px;
+}
+
+.hero .contents .buttons .yaziandplaybtn .play {
+  width: 50px;
+  height: 50px;
+  background: #133631;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  cursor: pointer;
+}
+
+.hero .contents .buttons .yaziandplaybtn .play .fa-play {
+  color: #fff;
+}
+
+.hero .contents .buttons .yaziandplaybtn p {
+  padding-top: 5px;
+  margin-left: 5px;
+}
+
+.services {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--services-color);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.services .yazilar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services .yazilar h1 {
+  color: #fff;
+  font-size: 35px;
+  font-family: Oxanium;
+  font-weight: 700 bold;
+}
+
+.services .yazilar p {
+  font-size: 14px;
+  color: #fff;
+  font-family: Oxanium;
+  font-weight: 200 light;
+  text-align: center;
+  line-height: 20px;
+}
+
+.services .qutular .car {
+  width: 250px;
+  height: 250px;
+  background: -webkit-gradient(linear, left top, left bottom, from(#1D574F), to(#3E7870));
+  background: linear-gradient(180deg, #1D574F 0%, #3E7870 100%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+.services .qutular .car h3 {
+  font-size: 20px;
+  font-family: Oxanium;
+  font-weight: 700 bold;
+  color: #fff;
+}
+
+.services .qutular .car p {
+  width: 220px;
+  font-size: 12px;
+  font-family: Oxanium;
+  color: #fff;
+  line-height: 16px;
+}
+
+.services .qutular .car .qutubtn {
+  width: 100px;
+  height: 40px;
+  background-color: #fff;
+  border: none;
+  border-radius: 5px;
+  color: #133631;
+  font-size: 10px;
+  font-family: Oxanium;
+  font-weight: bold;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.services .qutular .car .qutubtn:hover {
+  background-color: #133631;
+  color: #fff;
+}
+
+.jeep {
+  width: 100%;
+  height: 80vh;
+  background-color: var(--jeep-bgcolor);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.jeep .jeepcontent {
+  position: relative;
+}
+
+.jeep .jeepcontent .jeepphoto {
+  position: absolute;
+  top: 100px;
+}
+
+.jeep .eminem {
+  position: relative;
+}
+
+.jeep .eminem .yazicontents {
+  position: absolute;
+  top: 100px;
+}
+
+.jeep .eminem .yazicontents h2 {
+  font-size: 50px;
+  font-family: Oxanium;
+  color: var(--jeep-color);
+  font-weight: 700;
+}
+
+.jeep .eminem .yazicontents p {
+  font-family: Oxanium;
+  font-size: 14px;
+  line-height: 20px;
+  margin-top: 20px;
+  color: var(--jeep-pcolor);
+}
+
+.jeep .eminem .yazicontents .gf {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-top: 20px;
+}
+
+.jeep .eminem .yazicontents .gf #btn1 {
+  width: 120px;
+  height: 40px;
+  background-color: #133631;
+  color: #fff;
+  font-size: 15px;
+  font-family: Oxanium;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+}
+
+.jeep .eminem .yazicontents .gf #btn1:hover {
+  background-color: #1D574F;
+  color: #fff;
+}
+
+.jeep .eminem .yazicontents .gf #btn2 {
+  width: 120px;
+  height: 40px;
+  background-color: #133631;
+  color: #fff;
+  font-size: 15px;
+  font-family: Oxanium;
+  font-weight: bold;
+  border: none;
+  border-radius: 10px;
+  margin-left: 30px;
+}
+
+.jeep .eminem .yazicontents .gf #btn2:hover {
+  background-color: #1D574F;
+  color: #fff;
+}
+
+.clients {
+  width: 100%;
+  height: 40vh;
+  background: #1D574F;
+}
+
+.clients .statistic .speak {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.clients .statistic .speak h3 {
+  font-family: Oxanium;
+  font-size: 20px;
+  color: #fff;
+  line-height: 25px;
+}
+
+.clients .statistic .line {
+  width: 2px;
+  height: 240px;
+  background-color: #333;
+  margin-left: 50px;
+}
+
+.clients .sayac {
+  position: relative;
+}
+
+.clients .sayac .sayaclar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: 100px;
+}
+
+.clients .sayac .sayaclar #counter {
+  font-size: 40px;
+  color: #fff;
+  font-family: Manrope;
+  font-weight: bold;
+}
+
+.clients .sayac .sayaclar h3 {
+  font-size: 40px;
+  color: #fff;
+  font-family: Manrope;
+  font-weight: bold;
+}
+
+.clients .sayac .sayaclar #senan {
+  font-size: 40px;
+  color: #fff;
+  font-family: Manrope;
+  font-weight: bold;
+}
+
+.clients .sayac .sayaclar #Senan2 {
+  font-size: 40px;
+  color: #fff;
+  font-family: Manrope;
+  font-weight: bold;
+}
+
+.clients .sayac .icons {
+  position: absolute;
+  top: 150px;
+}
+
+.clients .sayac .icons .fa-solid {
+  font-size: 15px;
+}
+
+.clients .sayac .icons p {
+  font-size: 15px;
+  font-family: Oxanium;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.certificate {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--primary-color);
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+.logos {
+  width: 100%;
+  height: 80vh;
+  background-color: #133631;
+}
+
+.logos .plants h1 {
+  font-size: 35px;
+  font-family: Oxanium;
+  color: #fff;
+}
+
+.logos .plants p {
+  font-size: 12px;
+  font-family: Oxanium;
+  color: #fff;
+  text-align: center;
+  line-height: 18px;
+  margin-top: 15px;
+}
+
+.logos .logo_lar .logolar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logos .logo_lar .logolar .tesla {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+}
+
+.logos .Logolar2 .mazda {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.logos .Logolar2 .mazda .kia {
+  width: 80px;
+  height: 80px;
+  background-color: #fff;
+}
+
+.footer {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--primary-color);
+  -webkit-transition: 1s;
+  transition: 1s;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer .finance p {
+  font-family: Manrope;
+  font-size: 15px;
+  color: var(--footer-color);
+}
+
+.footer .finance .iconlar {
+  color: var(--footer-color);
+}
+
+.footer .company h3 {
+  font-size: 20px;
+  font-family: Manrope;
+  font-weight: 700;
+  color: var(--jeep-color);
+}
+
+.footer .company ul {
+  line-height: 40px;
+}
+
+.footer .company ul li {
+  list-style: none;
+}
+
+.footer .company ul li a {
+  color: var(--jeep-pcolor);
+  font-size: 17px;
+  font-family: Manrope;
+  text-decoration: none;
+}
+
+.footer .resource h3 {
+  font-size: 20px;
+  font-family: Manrope;
+  font-weight: 700;
+  color: var(--jeep-color);
+}
+
+.footer .resource p {
+  line-height: 40px;
+  font-size: 17px;
+  font-family: Manrope;
+  color: var(--jeep-pcolor);
+}
+
+.footer .common h3 {
+  font-size: 20px;
+  font-family: Manrope;
+  font-weight: 700;
+  color: var(--jeep-color);
+}
+
+.footer .common .form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-right: 30px;
+}
+
+.footer .common .form form input {
+  width: 100%;
+  padding: 10px 35px;
+  margin-top: 30px;
+  background: #133631;
+  color: #fff;
+  border: none;
+}
+
+.footer .common .form .sbs {
+  margin-top: 30px;
+  width: 150px;
+  height: 40px;
+  background: #276B62;
+  color: #fff;
+  font-family: Manrope;
+  font-size: 14px;
+  border: none;
+}
+
+@media only screen and (max-width: 992px) {
+  .hero {
+    width: 100%;
+    height: 100vh;
+    background-color: var(--primary-color);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .hero header {
+    width: 100%;
+    height: 80px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero header .logo {
+    width: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero header nav {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    position: relative;
+  }
+  .hero header nav ul {
+    width: 70%;
+    margin: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+  }
+  .hero header nav ul li {
+    display: none;
+  }
+  .hero header nav ul li a {
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: 700;
+    color: var(--secondry-color);
+    font-family: Oxanium;
+  }
+  .hero header #moonicon {
+    width: 30px;
+    margin-right: 70px;
+    cursor: pointer;
+  }
+  .hero header #aze {
+    width: 50px;
+    height: 20px;
+    background-color: var(--jeep-color);
+    border: none;
+    margin-right: 25px;
+    color: var(--primary-color);
+    display: none;
+  }
+  .hero header #eng {
+    width: 50px;
+    height: 20px;
+    background-color: var(--jeep-color);
+    border: none;
+    margin-right: 25px;
+    color: var(--primary-color);
+    display: none;
+  }
+  .hero .side-bar {
+    position: relative;
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-transform: translateX(300px);
+            transform: translateX(300px);
+    background: #133631;
+    width: 50%;
+    height: 100vh;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .hero .side-bar .menu {
+    width: 100%;
+    margin-top: 80px;
+  }
+  .hero .side-bar .menu .item {
+    position: relative;
+    cursor: pointer;
+  }
+  .hero .side-bar .menu .item a {
+    color: #fff;
+    font-size: 16px;
+    font-family: Oxanium;
+    text-decoration: none;
+    display: block;
+    padding: 5px 30px;
+    line-height: 60px;
+    text-align: center;
+    position: relative;
+  }
+  .hero .side-bar .menu .item a:hover {
+    background-color: #1D574F;
+  }
+  .hero .side-bar .menu .item a .dropdown {
+    position: absolute;
+    right: 0;
+    margin: 20px;
+    -webkit-transition: 0.3s ease;
+    transition: 0.3s ease;
+  }
+  .hero .side-bar .menu .item .submenu {
+    background-color: black;
+    display: block;
+  }
+  .hero .side-bar .fa-times {
+    position: absolute;
+    right: 0;
+    font-size: 20px;
+    margin: 25px;
+    color: #fff;
+    cursor: pointer;
+  }
+  .hero .side-bar .side-bar-icon {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: distribute;
+        justify-content: space-around;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+  }
+  .hero .side-bar .side-bar-icon .a {
+    width: 40px;
+    height: 30px;
+    background-color: #1D574F;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero .contents {
+    width: 100%;
+  }
+  .hero .contents h1 {
+    font-size: 30px;
+    font-weight: 800;
+    font-family: Manrope;
+    line-height: 35px;
+    color: var(--secondry-color);
+  }
+  .hero .contents p {
+    font-size: 17px;
+    font-weight: 500;
+    font-family: Manrope;
+    line-height: 20px;
+    color: #133631;
+    margin-top: 10px;
+  }
+  .hero .contents .buttons {
+    margin-top: 20px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .hero .contents .buttons .started {
+    width: 150px;
+    height: 50px;
+    border: none;
+    border-radius: 25px;
+    background-color: #133631;
+    color: #fff;
+    font-size: 20px;
+  }
+  .hero .contents .buttons .yaziandplaybtn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-left: 30px;
+  }
+  .hero .contents .buttons .yaziandplaybtn .play {
+    width: 50px;
+    height: 50px;
+    background: #133631;
+    border-radius: 50%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    cursor: pointer;
+  }
+  .hero .contents .buttons .yaziandplaybtn .play .fa-play {
+    color: #fff;
+  }
+  .hero .contents .buttons .yaziandplaybtn p {
+    padding-top: 5px;
+    margin-left: 5px;
+  }
+  .hero .porche {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .hero .porche img {
+    width: 330px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .services {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--services-color);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services .yazilar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .services .yazilar h1 {
+    color: #fff;
+    font-size: 20px;
+    font-family: Oxanium;
+    font-weight: 700 bold;
+  }
+  .services .yazilar p {
+    font-size: 10px;
+    color: #fff;
+    font-family: Oxanium;
+    font-weight: 200 light;
+    text-align: center;
+    line-height: 20px;
+  }
+  .services .qutular .car {
+    width: 170px;
+    height: 150px;
+    background: -webkit-gradient(linear, left top, left bottom, from(#1D574F), to(#3E7870));
+    background: linear-gradient(180deg, #1D574F 0%, #3E7870 100%);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    margin-left: 30px;
+  }
+  .services .qutular .car h3 {
+    font-size: 20px;
+    font-family: Oxanium;
+    font-weight: 700 bold;
+    color: #fff;
+  }
+  .services .qutular .car p {
+    width: 200px;
+    font-size: 10px;
+    font-family: sans-serif;
+    color: #fff;
+    line-height: 16px;
+    display: none;
+  }
+  .services .qutular .car .qutubtn {
+    width: 100px;
+    height: 40px;
+    background-color: #fff;
+    border: none;
+    border-radius: 5px;
+    color: #133631;
+    font-size: 10px;
+    font-family: Oxanium;
+    font-weight: bold;
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .services .qutular .car .qutubtn:hover {
+    background-color: #133631;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .jeep {
+    width: 100%;
+    height: 80vh;
+    background-color: var(--jeep-bgcolor);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .jeep .jeepcontent {
+    position: relative;
+  }
+  .jeep .jeepcontent .jeepphoto {
+    position: absolute;
+    top: 300px;
+  }
+  .jeep .jeepcontent .jeepphoto img {
+    width: 300px;
+  }
+  .jeep .eminem {
+    position: relative;
+  }
+  .jeep .eminem .yazicontents {
+    position: absolute;
+    top: 50px;
+  }
+  .jeep .eminem .yazicontents h2 {
+    font-size: 30px;
+    font-family: Oxanium;
+    color: var(--jeep-color);
+    font-weight: 700;
+  }
+  .jeep .eminem .yazicontents p {
+    font-family: Oxanium;
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 20px;
+    color: var(--jeep-pcolor);
+  }
+  .jeep .eminem .yazicontents .gf {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    margin-top: 20px;
+  }
+  .jeep .eminem .yazicontents .gf #btn1 {
+    width: 120px;
+    height: 40px;
+    background-color: #133631;
+    color: #fff;
+    font-size: 15px;
+    font-family: Oxanium;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+  }
+  .jeep .eminem .yazicontents .gf #btn1:hover {
+    background-color: #1D574F;
+    color: #fff;
+  }
+  .jeep .eminem .yazicontents .gf #btn2 {
+    width: 120px;
+    height: 40px;
+    background-color: #133631;
+    color: #fff;
+    font-size: 15px;
+    font-family: Oxanium;
+    font-weight: bold;
+    border: none;
+    border-radius: 10px;
+    margin-left: 30px;
+  }
+  .jeep .eminem .yazicontents .gf #btn2:hover {
+    background-color: #1D574F;
+    color: #fff;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .clients {
+    width: 100%;
+    height: 70vh;
+    background: #1D574F;
+  }
+  .clients .statistic .speak {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .clients .statistic .speak h3 {
+    font-family: Oxanium;
+    font-size: 13px;
+    color: #fff;
+    line-height: 25px;
+  }
+  .clients .statistic .line {
+    width: 2px;
+    height: 195px;
+    background-color: #333;
+    margin-left: 50px;
+  }
+  .clients .sayac {
+    position: relative;
+  }
+  .clients .sayac .sayaclar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: absolute;
+    top: 100px;
+  }
+  .clients .sayac .sayaclar #counter {
+    font-size: 40px;
+    color: #fff;
+    font-family: Manrope;
+    font-weight: bold;
+  }
+  .clients .sayac .sayaclar h3 {
+    font-size: 40px;
+    color: #fff;
+    font-family: Manrope;
+    font-weight: bold;
+  }
+  .clients .sayac .sayaclar #senan {
+    font-size: 40px;
+    color: #fff;
+    font-family: Manrope;
+    font-weight: bold;
+  }
+  .clients .sayac .sayaclar #Senan2 {
+    font-size: 40px;
+    color: #fff;
+    font-family: Manrope;
+    font-weight: bold;
+  }
+  .clients .sayac .icons {
+    position: absolute;
+    top: 150px;
+  }
+  .clients .sayac .icons .fa-solid {
+    font-size: 15px;
+  }
+  .clients .sayac .icons p {
+    font-size: 15px;
+    font-family: Oxanium;
+    color: #fff;
+    margin-left: 15px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .certificate {
+    width: 100%;
+    height: 50vh;
+    background-color: var(--primary-color);
+    -webkit-transition: 1s;
+    transition: 1s;
+  }
+  .certificate .sertifikat img {
+    width: 100px;
+    margin-left: 30px;
+  }
+}
+
+@media only screen and (max-width: 992px) {
+  .logos {
+    width: 100%;
+    height: 80vh;
+    background-color: #133631;
+    position: relative;
+  }
+  .logos .plants h1 {
+    font-size: 35px;
+    font-family: Oxanium;
+    color: #fff;
+  }
+  .logos .plants p {
+    font-size: 12px;
+    font-family: Oxanium;
+    color: #fff;
+    text-align: center;
+    line-height: 18px;
+    margin-top: 15px;
+  }
+  .logos .logo_lar .logolar {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .logos .logo_lar .logolar .tesla {
+    width: 80px;
+    height: 70px;
+    background-color: #fff;
+  }
+  .logos .Logolar2 .mazda {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .logos .Logolar2 .mazda .kia {
+    width: 80px;
+    height: 70px;
+    background-color: #fff;
+  }
+}
+/*# sourceMappingURL=style.css.map */

@@ -1,0 +1,1216 @@
+html{
+    overflow-x: hidden !important;
+}
+
+@import 'reset';
+ 
+
+
+:root{
+   --primary-color:#edf2fc;
+   --secondry-color:#133631;
+   --services-color:#133631;
+   --jeep-bgcolor:#fff;
+   --jeep-color:#133631;
+   --jeep-pcolor:#333;
+    --footer-color:#1D574F;
+}
+
+
+.dark-theme{
+    --primary-color:#000106;
+    --secondry-color:#edf2dc;
+    --services-color:#4285f4;
+    --jeep-bgcolor:#000106;
+    --jeep-color:#fff;
+    --jeep-pcolor:#fff;
+    --footer-color:#fff;
+}
+
+
+// body{
+//     overflow: hidden;
+// }
+//Hero Section
+.hero{
+    width: 100%;
+    height: 100vh; 
+    background-color: var(--primary-color);
+    transition: 1s;
+    position: relative;
+header{
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .logo{
+        width: 20%;
+      display: flex;
+        justify-content: center;
+        align-items: center;
+   
+    }
+    nav{
+        width: 80%;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        position: relative;
+
+        ul{
+            width: 70%;
+margin: auto;
+            display: flex;
+            justify-content: space-around;
+            // position: absolute;
+            // right: 100px;
+            
+         li{
+             cursor: pointer;
+             transition: all .4s ease;
+             a{
+                 text-decoration: none;
+                 font-size: 17px;
+                 font-weight: 700;
+                 color: var(--secondry-color);
+                font-family: Oxanium ;
+                transition: all .4s ease;
+             }
+         }
+
+        }
+
+    }
+
+    #moonicon{
+        width: 30px;
+        margin-right: 70px;
+        cursor: pointer;
+    }
+    #aze{
+        width: 50px;
+        height: 20px;
+        background-color: var(--jeep-color);
+        border: none;
+        margin-right: 50px;
+        color: var(--primary-color);
+
+    }
+    #eng{
+        width: 50px;
+        height: 20px;
+        background-color: var(--jeep-color);
+        border: none;
+      margin-right: 80px;
+        color: var(--primary-color);
+    }
+
+
+}
+ 
+.side-bar{
+    position: relative;
+    position: absolute;
+    top: 0;
+ right: 0;
+ transform: translateX(300px);
+    // left: -100%;
+    background: #133631;
+    width: 20%;
+    height: 100vh;
+    // position: fixed;
+    // transition-property: right;
+    transition: 1s;
+
+    .menu{
+        width: 100%;
+        margin-top: 80px;
+
+        .item{
+            position: relative;
+            cursor: pointer;
+            a{
+                color: #fff;
+              
+                font-size: 16px;
+                font-family: Oxanium;
+                text-decoration: none;
+                display: block;
+                padding: 5px 30px;
+                line-height: 60px;
+                text-align: center;
+                position: relative;
+                &:hover{
+                    background-color: #1D574F;
+                }
+                .dropdown{
+                    position: absolute;
+                    right: 0;
+                    margin: 20px;
+                    transition: 0.3s ease;
+                }
+            }
+
+            .submenu{
+                background-color: black;
+                display: block;
+             
+            }
+        }
+    }
+
+   .fa-times{
+       position: absolute;
+       right: 0;
+       font-size: 20px;
+       margin: 25px;
+       color: #fff;
+       cursor: pointer;
+   }
+
+.side-bar-icon{
+display: flex;
+justify-content: space-around;
+color: #fff;
+text-align: center;
+margin-top: 20px;
+
+
+   
+.a{
+    width: 40px;
+    height: 30px;
+    background-color: #1D574F;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+ 
+  
+}
+}
+}
+
+.menu-btn{
+    position: absolute;
+    color: #133631;
+    font-size: 20px;
+    right: 0;
+    top: 0;
+    margin: 30px;
+    cursor: pointer;
+}
+.side-bar.active{
+  transform: translateX(0);
+}
+
+.contents{
+    width: 100%;
+    h1{
+        font-size: 50px;
+        font-weight: 800;
+        font-family: Manrope;
+        line-height: 60px;
+        color: var(--secondry-color);
+    }
+    p{
+        font-size: 17px;
+        font-weight: 500;
+        font-family: Manrope;
+        line-height: 20px;
+        color: #133631;
+        margin-top: 10px;
+    
+
+    }
+
+    .buttons{
+        margin-top: 50px;
+        display: flex;
+        .started{
+            width: 150px;
+            height: 50px;
+            border: none;
+            border-radius: 25px;
+            background-color: #133631;
+           color: #fff;
+           font-size: 20px;
+          
+   
+        }
+        
+        .yaziandplaybtn{
+           display: flex;
+           margin-left: 30px;
+           .play{
+               width: 50px;
+               height: 50px;
+               background: #133631;
+               border-radius: 50%;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               cursor: pointer;
+               .fa-play{
+                color: #fff;
+               }
+           }
+           p{
+             
+            padding-top: 5px;
+            margin-left: 5px;
+           }
+        }
+    }
+}
+}
+// Services  Section
+.services{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--services-color);
+    transition: 1s;
+
+    .yazilar{
+       
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+       h1{
+           color: #fff;
+           font-size: 35px;
+           font-family: Oxanium;
+           font-weight: 700 bold;
+       }
+       p{
+           font-size: 14px;
+           color: #fff;
+           font-family: Oxanium;
+           font-weight: 200 light;
+           text-align: center;
+           line-height: 20px;
+       }
+    }
+
+  .qutular{
+
+    .car{
+        width: 250px;
+        height: 250px;
+     background: linear-gradient(180deg, #1D574F 0%, #3E7870 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    h3{
+        font-size: 20px;
+        font-family: Oxanium;
+        font-weight: 700 bold;
+        color: #fff;
+    }
+
+    p{
+        width: 220px;
+        font-size: 12px;
+        font-family: Oxanium ;
+        color: #fff;
+        line-height: 16px;
+    
+    }
+    .qutubtn{
+        width: 100px;
+        height: 40px;
+        background-color: #fff;
+        border: none;
+        border-radius: 5px;
+        color: #133631;
+        font-size: 10px;
+        font-family: Oxanium;
+        font-weight:  bold;
+        transition: 1s;
+        &:hover{
+            background-color: #133631;
+            color: #fff;
+        }
+    }
+        
+    }
+  }
+
+}
+
+//Jeep Section
+.jeep{
+    width: 100%;
+    height: 80vh;
+    background-color: var(--jeep-bgcolor);
+    transition: 1s;
+.jeepcontent{
+    position: relative;
+    .jeepphoto{
+        position: absolute;
+        top: 100px;
+    }
+}
+
+.eminem{
+    position: relative;
+    .yazicontents{
+        position: absolute;
+        top: 100px;
+
+        h2{
+            font-size: 50px;
+            font-family: Oxanium;
+            color: var(--jeep-color);
+            font-weight: 700;
+        }
+        p{
+            font-family: Oxanium;
+            font-size: 14px;
+            line-height: 20px;
+            margin-top: 20px;
+            color: var(--jeep-pcolor);
+        }
+
+        .gf{
+            display: flex;
+            margin-top: 20px;
+         
+        
+           #btn1{
+            width: 120px;
+            height: 40px;
+            background-color: #133631;
+            color: #fff;
+            font-size: 15px;
+     font-family: Oxanium;
+     font-weight:  bold;
+     border: none;
+     border-radius: 10px;
+       &:hover{
+           background-color: #1D574F;
+           color: #fff;
+       }
+              
+           }
+
+           #btn2{
+            width: 120px;
+            height: 40px;
+            background-color: #133631;
+            color: #fff;
+            font-size: 15px;
+     font-family: Oxanium;
+     font-weight:  bold;
+     border: none;
+     border-radius: 10px;
+     margin-left: 30px;
+     &:hover{
+        background-color: #1D574F;
+        color: #fff;
+     }
+   
+           }
+        }
+    }
+}
+}
+
+//Clients
+.clients{
+    width: 100%;
+    height: 40vh;
+    background: #1D574F;
+.statistic{
+
+  .speak{
+      display: flex;
+      h3{
+          font-family: Oxanium;
+          font-size: 20px;
+          color: #fff;
+          line-height: 25px;
+      }
+    
+
+
+  }
+  .line{
+      width: 2px;
+      height: 240px;
+      background-color: #333;
+      margin-left: 50px;
+  }
+}
+
+.sayac{
+    position: relative;
+  .sayaclar{
+      display: flex;
+      position: absolute;
+      top: 100px;
+      #counter{
+          font-size: 40px;
+          color: #fff;
+          font-family: Manrope;
+          font-weight: bold;
+
+      }
+      h3{
+          font-size: 40px;
+          color: #fff;
+          font-family: Manrope;
+          font-weight: bold;
+      }
+      #senan{
+        font-size: 40px;
+        color: #fff;
+        font-family: Manrope;
+        font-weight: bold;
+      }
+      #Senan2{
+        font-size: 40px;
+        color: #fff;
+        font-family: Manrope;
+        font-weight: bold;
+      }
+ 
+  }
+  .icons{
+      position: absolute;
+      top: 150px;
+      .fa-solid{
+          font-size: 15px;
+      }
+      p{
+          font-size: 15px;
+          font-family: Oxanium;
+          color: #fff;
+          margin-left: 15px;
+      }
+  }
+}
+}
+
+//Certificates
+.certificate{
+    width: 100%;
+    height: 50vh;
+    background-color: var(--primary-color);
+    transition: 1s;
+
+}
+
+//Logos
+.logos{
+    width: 100%;
+    height: 80vh;
+    background-color: #133631;
+
+    .plants{
+        h1{
+            font-size: 35px;
+            font-family: Oxanium;
+            color: #fff;
+        }
+        p{
+            font-size: 12px;
+            font-family: Oxanium;
+            color: #fff;
+            text-align: center;
+            line-height: 18px;
+            margin-top: 15px;
+        }
+    }
+
+    .logo_lar{
+        .logolar{
+        display: flex;
+      justify-content: center;
+        
+            .tesla{
+                width: 80px;
+                height: 80px;
+                background-color: #fff;
+            }
+        }
+    }
+
+    .Logolar2{
+       .mazda{
+           display: flex;
+           justify-content: center;
+
+           .kia{
+               width: 80px;
+               height: 80px;
+               background-color: #fff;
+           }
+       }
+
+    }
+}
+
+//Footer
+.footer{
+   
+    width: 100%;
+    height: 50vh;
+    background-color: var(--primary-color);
+    transition: 1s;
+
+    // .row{
+        width: 100%;
+        display: flex;
+        align-items: center;
+       
+    // }
+
+    .finance{
+        p{
+            font-family: Manrope;
+            font-size: 15px;
+            color: var(--footer-color);
+          
+        }
+        .iconlar{
+            color: var(--footer-color);
+        }
+
+    }
+
+    .company{
+        h3{
+            font-size: 20px;
+            font-family: Manrope;
+            font-weight: 700;
+            color: var(--jeep-color);
+        }
+
+        ul{
+           line-height: 40px;
+
+           li{
+               list-style: none;
+               a{
+                   color: var(--jeep-pcolor);
+                   font-size: 17px;
+                   font-family: Manrope;
+                   text-decoration: none;
+               }
+           }
+        }
+    }
+
+    .resource{
+        h3{
+            font-size: 20px;
+            font-family: Manrope;
+            font-weight: 700;
+            color: var(--jeep-color);
+
+        }
+        p{
+            line-height: 40px;
+            font-size: 17px;
+            font-family: Manrope;
+            color: var(--jeep-pcolor);
+        }
+    }
+
+    .common{
+        h3{
+            font-size: 20px;
+            font-family: Manrope;
+            font-weight: 700;
+            color: var(--jeep-color);
+        }
+.form{
+    display: flex;
+    margin-right: 30px;
+    
+    form{
+        
+        input{
+          width: 100%;
+            padding: 10px 35px;
+            margin-top: 30px;
+            background: #133631;
+
+            color: #fff;
+            border: none;
+        }
+      
+    }
+
+    .sbs{
+        margin-top: 30px;
+      width: 150px;
+      height: 40px;
+        background: #276B62;
+
+        color: #fff;
+        font-family: Manrope;
+        font-size: 14px;
+        border: none;
+    }
+}
+    }
+}
+
+
+//MEDIA SCREEN
+
+@media only screen and (max-width: 992px){
+  
+    .hero{
+        width: 100%;
+        height: 100vh; 
+        background-color: var(--primary-color);
+        transition: 1s;
+    header{
+        width: 100%;
+        height: 80px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        .logo{
+            width: 50%;
+          display: flex;
+            justify-content: center;
+            align-items: center;
+       
+        }
+        nav{
+            width: 80%;
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            position: relative;
+    
+            ul{
+                width: 70%;
+              
+    margin: auto;
+                display: flex;
+                justify-content: space-around;
+                // position: absolute;
+                // right: 100px;
+                
+             li{
+                 display: none;
+                 a{
+                     text-decoration: none;
+                     font-size: 17px;
+                     font-weight: 700;
+                     color: var(--secondry-color);
+                    font-family: Oxanium ;
+                 }
+             }
+    
+            }
+    
+        }
+    
+        #moonicon{
+            width: 30px;
+            margin-right: 70px;
+            cursor: pointer;
+        }
+        #aze{
+            width: 50px;
+            height: 20px;
+            background-color: var(--jeep-color);
+            border: none;
+            margin-right: 25px;
+            color: var(--primary-color);
+            display: none;
+    
+        }
+        #eng{
+            width: 50px;
+            height: 20px;
+            background-color: var(--jeep-color);
+            border: none;
+            margin-right: 25px;
+            color: var(--primary-color);
+            display: none;
+        }
+    }
+    .side-bar{
+        position: relative;
+        position: absolute;
+        top: 0;
+     right: 0;
+     transform: translateX(300px);
+        // left: -100%;
+        background: #133631;
+        width: 50%;
+        height: 100vh;
+        // position: fixed;
+        // transition-property: right;
+        transition: 1s;
+    
+        .menu{
+            width: 100%;
+            margin-top: 80px;
+    
+            .item{
+                position: relative;
+                cursor: pointer;
+                a{
+                    color: #fff;
+                  
+                    font-size: 16px;
+                    font-family: Oxanium;
+                    text-decoration: none;
+                    display: block;
+                    padding: 5px 30px;
+                    line-height: 60px;
+                    text-align: center;
+                    position: relative;
+                    &:hover{
+                        background-color: #1D574F;
+                    }
+                    .dropdown{
+                        position: absolute;
+                        right: 0;
+                        margin: 20px;
+                        transition: 0.3s ease;
+                    }
+                }
+    
+                .submenu{
+                    background-color: black;
+                    display: block;
+                 
+                }
+            }
+        }
+    
+       .fa-times{
+           position: absolute;
+           right: 0;
+           font-size: 20px;
+           margin: 25px;
+           color: #fff;
+           cursor: pointer;
+       }
+    
+    .side-bar-icon{
+    display: flex;
+    justify-content: space-around;
+    color: #fff;
+    text-align: center;
+    margin-top: 20px;
+    
+    
+       
+    .a{
+        width: 40px;
+        height: 30px;
+        background-color: #1D574F;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+     
+      
+    }
+    }
+    }
+
+    
+    .contents{
+        width: 100%;
+    //    display: flex;
+    //    justify-content: center;
+    //    align-items: center;
+    //    flex-direction: column;
+        h1{
+            font-size: 30px;
+            font-weight: 800;
+            font-family: Manrope;
+            line-height: 35px;
+            color: var(--secondry-color);
+        }
+        p{
+            font-size: 17px;
+            font-weight: 500;
+            font-family: Manrope;
+            line-height: 20px;
+            color: #133631;
+            margin-top: 10px;
+        
+    
+        }
+    
+        .buttons{
+            margin-top: 20px;
+            display: flex;
+            .started{
+                width: 150px;
+                height: 50px;
+                border: none;
+                border-radius: 25px;
+                background-color: #133631;
+               color: #fff;
+               font-size: 20px;
+              
+       
+            }
+            
+            .yaziandplaybtn{
+               display: flex;
+               margin-left: 30px;
+               .play{
+                   width: 50px;
+                   height: 50px;
+                   background: #133631;
+                   border-radius: 50%;
+                   display: flex;
+                   justify-content: center;
+                   align-items: center;
+                   cursor: pointer;
+                   .fa-play{
+                    color: #fff;
+                   }
+               }
+               p{
+                 
+                padding-top: 5px;
+                margin-left: 5px;
+               }
+            }
+        }
+    }
+    .porche{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img{
+            width: 330px;
+        }
+    }
+    }
+}
+@media only screen and (max-width: 992px){
+    .services{
+        width: 100%;
+        height: 80vh;
+        background-color: var(--services-color);
+        transition: 1s;
+    
+        .yazilar{
+           
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+           h1{
+               color: #fff;
+               font-size: 20px;
+               font-family: Oxanium;
+               font-weight: 700 bold;
+           }
+           p{
+               font-size: 10px;
+               color: #fff;
+               font-family: Oxanium;
+               font-weight: 200 light;
+               text-align: center;
+               line-height: 20px;
+           }
+        }
+    
+      .qutular{
+    
+        .car{
+            width: 170px;
+            height: 150px;
+
+         background: linear-gradient(180deg, #1D574F 0%, #3E7870 100%);
+        display: flex;
+        justify-content: center;
+      
+        align-items: center;
+        flex-direction: column;
+        margin-left: 30px;
+    
+        h3{
+            font-size: 20px;
+            font-family: Oxanium;
+            font-weight: 700 bold;
+            color: #fff;
+        }
+    
+        p{
+            width: 200px;
+            font-size:10px;
+            font-family: sans-serif;
+            color: #fff;
+            line-height: 16px;
+            display: none;
+        
+        }
+        .qutubtn{
+            width: 100px;
+            height: 40px;
+            background-color: #fff;
+            border: none;
+            border-radius: 5px;
+            color: #133631;
+            font-size: 10px;
+            font-family: Oxanium;
+            font-weight:  bold;
+            transition: 1s;
+            &:hover{
+                background-color: #133631;
+                color: #fff;
+            }
+        }
+            
+        }
+      }
+    
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .jeep{
+        width: 100%;
+        height: 80vh;
+        background-color: var(--jeep-bgcolor);
+        transition: 1s;
+    .jeepcontent{
+        position: relative;
+        .jeepphoto{
+            position: absolute;
+            top: 300px;
+           img{
+               width: 300px;
+           }
+        }
+    }
+    
+    .eminem{
+        position: relative;
+        .yazicontents{
+            position: absolute;
+            top: 50px;
+    
+            h2{
+                font-size: 30px;
+                font-family: Oxanium;
+                color: var(--jeep-color);
+                font-weight: 700;
+            }
+            p{
+                font-family: Oxanium;
+                font-size: 14px;
+                line-height: 20px;
+                margin-top: 20px;
+                color: var(--jeep-pcolor);
+            }
+    
+            .gf{
+                display: flex;
+                margin-top: 20px;
+             
+            
+               #btn1{
+                width: 120px;
+                height: 40px;
+                background-color: #133631;
+                color: #fff;
+                font-size: 15px;
+         font-family: Oxanium;
+         font-weight:  bold;
+         border: none;
+         border-radius: 10px;
+           &:hover{
+               background-color: #1D574F;
+               color: #fff;
+           }
+                  
+               }
+    
+               #btn2{
+                width: 120px;
+                height: 40px;
+                background-color: #133631;
+                color: #fff;
+                font-size: 15px;
+         font-family: Oxanium;
+         font-weight:  bold;
+         border: none;
+         border-radius: 10px;
+         margin-left: 30px;
+         &:hover{
+            background-color: #1D574F;
+            color: #fff;
+         }
+       
+               }
+            }
+        }
+    }
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .clients{
+        width: 100%;
+        height: 70vh;
+        background: #1D574F;
+    .statistic{
+    
+      .speak{
+          display: flex;
+          h3{
+              font-family: Oxanium;
+              font-size: 13px;
+              color: #fff;
+              line-height: 25px;
+          }
+        
+    
+    
+      }
+      .line{
+          width: 2px;
+          height: 195px;
+          background-color: #333;
+          margin-left: 50px;
+      }
+    }
+    
+    .sayac{
+        position: relative;
+      .sayaclar{
+          display: flex;
+          position: absolute;
+          top: 100px;
+          #counter{
+              font-size: 40px;
+              color: #fff;
+              font-family: Manrope;
+              font-weight: bold;
+    
+          }
+          h3{
+              font-size: 40px;
+              color: #fff;
+              font-family: Manrope;
+              font-weight: bold;
+          }
+          #senan{
+            font-size: 40px;
+            color: #fff;
+            font-family: Manrope;
+            font-weight: bold;
+          }
+          #Senan2{
+            font-size: 40px;
+            color: #fff;
+            font-family: Manrope;
+            font-weight: bold;
+          }
+     
+      }
+      .icons{
+          position: absolute;
+          top: 150px;
+          .fa-solid{
+              font-size: 15px;
+          }
+          p{
+              font-size: 15px;
+              font-family: Oxanium;
+              color: #fff;
+              margin-left: 15px;
+          }
+      }
+    }
+    }
+}
+
+@media only screen and (max-width: 992px){
+    .certificate{
+        width: 100%;
+        height: 50vh;
+        background-color: var(--primary-color);
+        transition: 1s;
+        .sertifikat{
+            img{
+                width: 100px;
+                margin-left: 30px;
+            }
+        }
+    
+    }
+}
+@media only screen and (max-width: 992px){
+    .logos{
+        width: 100%;
+        height: 80vh;
+        background-color: #133631;
+        position: relative;
+    
+        .plants{
+            h1{
+                font-size: 35px;
+                font-family: Oxanium;
+                color: #fff;
+            }
+            p{
+                font-size: 12px;
+                font-family: Oxanium;
+                color: #fff;
+                text-align: center;
+                line-height: 18px;
+                margin-top: 15px;
+            }
+        }
+    
+        .logo_lar{
+          
+            .logolar{
+         
+            display: flex;
+          justify-content: center;
+            
+                .tesla{
+                    width: 80px;
+                    height: 70px;
+                    background-color: #fff;
+                }
+            }
+        }
+    
+        .Logolar2{ 
+            
+           .mazda{
+               display: flex;
+               justify-content: center;
+            
+              
+    
+               .kia{
+                   width: 80px;
+                   height: 70px;
+                   background-color: #fff;
+                   
+              
+               
+                  
+                 
+               }
+           }
+    
+        }
+    }
+}
+
